@@ -39,3 +39,12 @@ body {
   text-decoration: none;
   text-transform: capitalize;
 }
+
+.main-index {
+  color: #333333;
+  background-color: #FFFFFF;
+  background-image: url("../images/zigzag.svg"), url("../images/index-background.jpg");
+  background-position: 50% 428px, 50% 0;
+  background-size: 1200px 57px, 1200px 485px;
+  background-repeat: no-repeat;
+}
