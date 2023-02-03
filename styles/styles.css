@@ -97,5 +97,33 @@ body {
 
 .advantages-title-blue {
   color: #FFFFFF;
-  background-color: ;
+  background-color: #82B3D3;
+}
+
+.advantages-title-white {
+  color: #000000;
+  background-color: rgba(131, 179, 211, 0);
+}
+
+.advantages-title-grey {
+  color: #000000;
+  background-color: rgba(131, 179, 211, 0);
+}
+
+.advantages-item-blue {
+  width: 400px;
+  height: 385px;
+  background-color: #82B3D3;
+}
+
+.advantages-item-white {
+  width: 400px;
+  height: 385px;
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-item-grey {
+  width: 400px;
+  height: 385px;
+  background-color: rgba(131, 179, 211, 0.2);
 }
