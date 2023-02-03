@@ -28,6 +28,7 @@ body {
   background-color: #FFFFFF;
 }
 
+/*Ссылки в навигации*/
 .navigation-link {
   font-family: "PT Sans", sans-serif;
   font-size: 20px;
@@ -49,6 +50,31 @@ body {
   background-repeat: no-repeat;
 }
 
-.advantages-container {
+/*При последующей стилизации выровнять <img> с текстом-лого Седоны по центру*/
+
+/*Идентичные контейнеры с текстом перед преимуществами, сервисами и в секции "Заинтересовались?"*/
+.advantages-container,
+.services-container,
+.search {
   text-align: center;
 }
+
+/*1/2 предложений в контейнерах перед преимуществами, сервисами и в секции "Заинтересовались?"*/
+.advantages-description,
+.services-description {
+  color:#000000;
+  background-color: #FFFFFF;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+/*2/2 предложений в контейнерах перед преимуществами, сервисамии и в секции "Заинтересовались?"*/
+.advantages-caption,
+.services-caption {
+  font-family: "PT Sans", sans-serif;
+}
+
+
