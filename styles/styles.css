@@ -48,3 +48,7 @@ body {
   background-size: 1200px 57px, 1200px 485px;
   background-repeat: no-repeat;
 }
+
+.advantages-container {
+  text-align: center;
+}
