@@ -105,7 +105,8 @@ body {
   text-transform: uppercase;
 }
 
-.advantages-text {
+.advantages-text,
+.services-text {
   font-size: 18px;
   line-height: 21px;
 }
@@ -163,4 +164,29 @@ body {
   width: 400px;
   height: 385px;
   background-color: #82B3D3;
+}
+
+.services-list {
+  text-align: center;
+}
+
+.services-title {
+  font-family: "PT Sans", sans-serif;
+  color:#000000;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.services-item-blue {
+  width: 400px;
+  height: 385px;
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.services-item-white {
+  width: 400px;
+  height: 385px;
+  background-color: #FFFFFF;
 }
