@@ -3,8 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>Каталог</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
+    <div class="box-shadow">
     <header class="page-header">
       <nav class="navigation">
         <a class="page-header-logo" href="index.html">
@@ -42,7 +44,7 @@
     </header>
     <main class="main-inner">
       <div class="background-catalog">
-        <h1>Гостиницы Седоны</h1>
+        <h1 class="inner-title">Гостиницы Седоны</h1>
         <ol class="breadcrumbs">
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link" href="index.html">
@@ -115,7 +117,8 @@
           <option value="expensiver">Сначала дорогие</option>
           <option value="popular">Сначала популярные</option>
         </select>
-        <a class="button" href="#">
+        <div class="sorting-container"></div>
+        <a class="button button-sorting" href="#">
           <span class="visually-hidden">Показать карточки</span>
         </a>
         <a class="button button-light" href="#">
@@ -124,6 +127,7 @@
         <a class="button button-light" href="#">
           <span class="visually-hidden">Показать список</span>
         </a>
+      </div>
         <ul class="hotels-list">
           <li class="hotel-card">
             <a class="hotel-card-link" href="#">
@@ -204,10 +208,10 @@
           </li>
         </ol>
       </section>
-      <section class="subscribe">
+      <section class="subscribe subscribe-inner">
         <h2 class="subscribe-description">Подпишитесь на рассылку</h2>
-        <p class="subscribe-caption">Только полезная информация и никакого спама, честное бойскаутское!</p>
-        <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
+        <p class="subscribe-caption subscribe-caption-inner">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <form class="subscribe-form subscribe-form-inner" action="https://echo.htmlacademy.ru/" method="post">
           <label class="visually-hidden" for="subscribe-email">E-mail</label>
           <input class="field" placeholder="Ваш e-mail" type="email" name="subscribe-email" id="subscribe-email" required>
           <button class="button subscribe-button" type="submit">
@@ -243,5 +247,6 @@
         <img class="page-footer-logo" src="images/academy-logo.svg" width="114.9" height="32.9" alt="Логотип htmlacademy">
       </a>
     </footer>
+  </div>
   </body>
 </html>
