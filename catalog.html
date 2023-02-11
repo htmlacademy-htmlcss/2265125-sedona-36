@@ -3,8 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>Каталог</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
+    <div class="box-shadow">
     <header class="page-header">
       <nav class="navigation">
         <a class="page-header-logo" href="index.html">
@@ -42,7 +44,7 @@
     </header>
     <main class="main-inner">
       <div class="background-catalog">
-        <h1>Гостиницы Седоны</h1>
+        <h1 class="inner-title">Гостиницы Седоны</h1>
         <ol class="breadcrumbs">
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link" href="index.html">
@@ -115,7 +117,8 @@
           <option value="expensiver">Сначала дорогие</option>
           <option value="popular">Сначала популярные</option>
         </select>
-        <a class="button" href="#">
+        <span class="sorting-container"></span>
+        <a class="button button-sorting" href="#">
           <span class="visually-hidden">Показать карточки</span>
         </a>
         <a class="button button-light" href="#">
@@ -127,7 +130,7 @@
         <ul class="hotels-list">
           <li class="hotel-card">
             <a class="hotel-card-link" href="#">
-              <img class="hotel-card-image" src="images/amara-hotel.jpg" width="300" height="212" alt="Вид из Amara Resort & Spa на звёздное небо и скалы">
+              <img class="hotel-card-image" src="images/catalog-hotels/amara-hotel.jpg" width="300" height="212" alt="Вид из Amara Resort & Spa на звёздное небо и скалы">
               <h3 class="hotel-cars-title">Amara Resort & Spa</h3>
             </a>
             <p class="hotel-card-description">Гостиница</p>
@@ -142,7 +145,7 @@
           </li>
           <li class="hotel-card">
             <a class="hotel-card-link" href="#">
-              <img class="hotel-card-image" src="images/villas-hotel.jpg" widht="300" height="212" alt="Вид из Villas at Poco Diablo на небо, скалы и радугу">
+              <img class="hotel-card-image" src="images/catalog-hotels/villas-hotel.jpg" width="300" height="212" alt="Вид из Villas at Poco Diablo на небо, скалы и радугу">
               <h3 class="hotel-cars-title">Villas at Poco Diablo</h3>
             </a>
             <p class="hotel-card-description">Гостиница</p>
@@ -156,7 +159,7 @@
           </li>
           <li class="hotel-card">
             <a class="hotel-card-link" href="#">
-              <img class="hotel-card-image" src="images/desert-hotel.jpg" width="300" height="212" alt="Вид из Desert Quail Inn на небо и скалу">
+              <img class="hotel-card-image" src="images/catalog-hotels/desert-hotel.jpg" width="300" height="212" alt="Вид из Desert Quail Inn на небо и скалу">
               <h3 class="hotel-cars-title">Desert Quail Inn</h3>
             </a>
             <p class="hotel-card-description">Гостиница</p>
@@ -170,7 +173,7 @@
           </li>
           <li class="hotel-card">
             <a class="hotel-card-link" href="#">
-              <img class="hotel-card-image" src="images/greentree-hotel.jpg" width="300" height="212" alt="Вид из GreenTree Inn на ночное небо и скалу">
+              <img class="hotel-card-image" src="images/catalog-hotels/greentree-hotel.jpg" width="300" height="212" alt="Вид из GreenTree Inn на ночное небо и скалу">
               <h3 class="hotel-cars-title">GreenTree Inn</h3>
             </a>
             <p class="hotel-card-description">Гостиница</p>
@@ -204,10 +207,10 @@
           </li>
         </ol>
       </section>
-      <section class="subscribe">
+      <section class="subscribe subscribe-inner">
         <h2 class="subscribe-description">Подпишитесь на рассылку</h2>
-        <p class="subscribe-caption">Только полезная информация и никакого спама, честное бойскаутское!</p>
-        <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
+        <p class="subscribe-caption subscribe-caption-inner">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <form class="subscribe-form subscribe-form-inner" action="https://echo.htmlacademy.ru/" method="post">
           <label class="visually-hidden" for="subscribe-email">E-mail</label>
           <input class="field" placeholder="Ваш e-mail" type="email" name="subscribe-email" id="subscribe-email" required>
           <button class="button subscribe-button" type="submit">
@@ -240,8 +243,9 @@
         <a class="footer-contacts-address-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
       </address>
       <a class="page-footer-logo" href="https://htmlacademy.ru/">
-        <img class="page-footer-logo" src="images/academy-logo.svg" width="114.9" height="32.9" alt="Логотип htmlacademy">
+        <img class="page-footer-logo" src="images/academy-logo.svg" width="115" height="33" alt="Логотип htmlacademy">
       </a>
     </footer>
+  </div>
   </body>
 </html>
