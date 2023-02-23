@@ -439,6 +439,8 @@ body {
 .results {
   color: #333333;
   background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column; /*ТОЧНО?*/
 }
 
 .results-found {
@@ -447,6 +449,8 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  /*Значение шире, чем в макете, т.к. кол-во может быть больше*/
+  min-width: 370px;
 }
 
 .select-control {
@@ -455,7 +459,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   color: #333333;
-  padding: 14px 20px;
+  padding-left: 20px;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
   width: 292px;
@@ -465,6 +469,14 @@ body {
 .sorting-container {
   color: #000000;
   background-color: #FFFFFF;
+  display: flex;
+  max-width: 1060;
+  justify-content: center;
+  align-items: center;
+}
+
+.select-container {
+
 }
 
 .button-sorting {
@@ -472,9 +484,6 @@ body {
   background-color: #FFFFFF;
   border: 2px solid #000000;
   border-radius: 4px;
-  /*padding: 14px 12px;
-  width: 48px;
-  height: 48px;*/
 }
 
 .button-light {
@@ -482,14 +491,12 @@ body {
   background-color: #FFFFFF;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
-  /*padding: 14px 12px;
-  width: 48px;
-  height: 48px;*/
 }
 
 .hotels-list {
   list-style-type: none;
   padding: 0;
+  width: 1060px;
 }
 
 .hotel-card {
@@ -610,6 +617,7 @@ body {
   background-image: none;
   background-color: #FFFFFF;
   color: #000000;
+  height: 415px;
 }
 
 .subscribe-caption-inner {
