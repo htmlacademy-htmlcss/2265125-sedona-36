@@ -63,6 +63,11 @@ body {
   width: 1200px;
 }
 
+.page-header-logo {
+  width: 140px;
+  margin-right: 20px;
+}
+
 .navigation {
   display: flex;
   width: 892px;
@@ -96,7 +101,10 @@ body {
 .navigation-button {
   width: 160px;
   height: 36px;
-  padding: 8px 50px;
+  padding: 8px 20px;
+  font-size: 16px;
+  line-height: 20px;
+  align-self: center;
 }
 
 .main-container {
@@ -376,6 +384,7 @@ body {
   line-height: 78px;
   color: #FFFFFF;
   text-transform: capitalize;
+  margin: 0;
 }
 
 .background-catalog {
