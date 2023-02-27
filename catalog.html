@@ -10,7 +10,7 @@
       <header class="page-header">
           <a class="page-header-logo" href="index.html">
             <img
-              class="page-header-logo"
+              class="page-header-logo-image"
               src="images/sedona-logo.svg"
               width="140"
               height="70"
@@ -145,10 +145,12 @@
                 </ul>
               </fieldset>
               <!--Позже добавить фильтр "Стоимость:"-->
+              <div class="filter-buttons">
               <button class="button button-submit" type="submit">
                 Применить
               </button>
               <button class="button button-reset" type="reset">Сбросить</button>
+            </div>
             </form>
           </section>
         </div>
@@ -164,7 +166,8 @@
             <option value="popular">Сначала популярные</option>
           </select>
         </div>
-          <a class="button button-sorting" href="#">
+        <div class="sorting-buttons">
+          <a class="button button-dark" href="#">
             <span class="visually-hidden">Показать карточки</span>
           </a>
           <a class="button button-light" href="#">
@@ -173,6 +176,7 @@
           <a class="button button-light" href="#">
             <span class="visually-hidden">Показать список</span>
           </a>
+        </div>
       </div>
           <ul class="hotels-list">
             <li class="hotel-card">

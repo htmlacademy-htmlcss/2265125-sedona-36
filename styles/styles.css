@@ -434,6 +434,7 @@ body {
 .main-inner {
   color: #333333;
   background-color: #FFFFFF;
+  padding: 0;
 }
 
 .inner-title {
@@ -444,6 +445,8 @@ body {
   color: #FFFFFF;
   text-transform: capitalize;
   margin: 0;
+  margin-bottom: 8px;
+  margin-left: 70px;
 }
 
 .background-catalog {
@@ -451,19 +454,52 @@ body {
   background-color: #82B3D3;
   background-image: url("../images/catalog-background.jpg");
   background-size: 1200px 412px;
-  background-position: 0 64px;
   background-repeat: no-repeat;
+  margin: 0;
 }
 
 .breadcrumbs {
   color: #FFFFFF;
   font-size: 16px;
   line-height: 21px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  height: 21px;
+  margin-bottom: 40px;
+  margin-left: 70px;
 }
 
 .breadcrumbs-link {
   color: inherit;
   text-decoration: none;
+  margin-right: 10px;
+}
+
+.breadcrumbs-text {
+  margin: 0;
+}
+
+.catalog-filter {
+  display: flex;
+  margin: 0 auto;
+  margin-left: 70px;
+  width: 1060px;
+}
+
+.catalog-filter-group {
+  width: 151px;
+  min-height: 157px;
+  padding: 0;
+  margin: 0;
+  margin-right: 70px;
+  margin-bottom: 73px;
+}
+
+.catalog-filter-list {
+  list-style-type: none;
+  padding: 0;
 }
 
 .catalog-filter-title {
@@ -480,11 +516,22 @@ body {
   line-height: 23px;
 }
 
+.filter-buttons {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  justify-content: center;
+}
+
 .button-submit {
   width: 191px;
   height: 36px;
   background-color: #82B3D3;
   border-radius: 4px;
+  margin-bottom: 32px;
+  padding: 8px 20px;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .button-reset {
@@ -493,13 +540,20 @@ body {
   border-radius: 4px;
   border-color: transparent;
   background-color: transparent;
+  margin-bottom: 70px;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .results {
   color: #333333;
   background-color: #FFFFFF;
   display: flex;
-  flex-direction: column; /*ТОЧНО?*/
+  flex-direction: column;
+  padding-top: 50px;
+  padding-bottom: 60px;
+  width: 1060px;
+  margin: 0 auto;
 }
 
 .results-found {
@@ -510,6 +564,18 @@ body {
   text-transform: uppercase;
   /*Значение шире, чем в макете, т.к. кол-во может быть больше*/
   min-width: 370px;
+  margin: 0;
+  margin-right: auto;
+}
+
+.sorting-container {
+  color: #000000;
+  background-color: #FFFFFF;
+  display: flex;
+  max-width: 1060;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
 }
 
 .select-control {
@@ -523,22 +589,24 @@ body {
   border-radius: 4px;
   width: 292px;
   height: 49px;
+  margin-right: 70px;
 }
 
-.sorting-container {
-  color: #000000;
-  background-color: #FFFFFF;
+.sorting-buttons {
   display: flex;
-  max-width: 1060;
-  justify-content: center;
-  align-items: center;
 }
 
-.button-sorting {
+.sorting-buttons .button:not(:last-child) {
+  margin-right: 8px;
+}
+
+.button-dark {
   color: #000000;
   background-color: #FFFFFF;
   border: 2px solid #000000;
   border-radius: 4px;
+  width: 48px;
+  height: 48px;
 }
 
 .button-light {
@@ -546,6 +614,8 @@ body {
   background-color: #FFFFFF;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
+  width: 48px;
+  height: 48px;
 }
 
 .hotels-list {
@@ -634,6 +704,9 @@ body {
   padding: 0;
   display: flex;
   gap: 8px;
+  margin: 0;
+  margin-top: 40px;
+  height: 60px;
 }
 
 .pagination-link {
