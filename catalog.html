@@ -10,7 +10,7 @@
       <header class="page-header">
           <a class="page-header-logo" href="index.html">
             <img
-              class="page-header-logo"
+              class="page-header-logo-image"
               src="images/sedona-logo.svg"
               width="140"
               height="70"
@@ -48,11 +48,11 @@
           <a class="button navigation-button" href="#">Хочу сюда!</a>
         </nav>
       </header>
-      <main class="main-inner">
+      <main class="main-container main-inner">
         <div class="background-catalog">
           <h1 class="inner-title">Гостиницы Седоны</h1>
           <ol class="breadcrumbs">
-            <li class="breadcrumbs-item">
+            <li class="breadcrumbs-item breadcrumbs-home">
               <a class="breadcrumbs-link" href="index.html">
                 <span class="visually-hidden">Главная страница</span>
               </a>
@@ -62,7 +62,7 @@
             </li>
           </ol>
           <section class="filter">
-            <h2 class="visually-hidden">Фильтры поиска</h2>
+            <h2 class="visually-hidden" hidden>Фильтры поиска</h2>
             <form
               class="catalog-filter"
               action="https://echo.htmlacademy.ru/"
@@ -145,24 +145,29 @@
                 </ul>
               </fieldset>
               <!--Позже добавить фильтр "Стоимость:"-->
+              <div class="filter-buttons">
               <button class="button button-submit" type="submit">
                 Применить
               </button>
               <button class="button button-reset" type="reset">Сбросить</button>
+            </div>
             </form>
           </section>
         </div>
         <section class="results">
+          <div class="sorting-container">
           <h2 class="results-found">
             Найдено гостиниц: <span class="results-amount">38</span>
           </h2>
+          <div class="select-container">
           <select class="select-control" aria-label="Сортировка">
             <option value="cheap">Сначала дешевые</option>
             <option value="expensiver">Сначала дорогие</option>
             <option value="popular">Сначала популярные</option>
           </select>
-          <span class="sorting-container"></span>
-          <a class="button button-sorting" href="#">
+        </div>
+        <div class="sorting-buttons">
+          <a class="button button-dark" href="#">
             <span class="visually-hidden">Показать карточки</span>
           </a>
           <a class="button button-light" href="#">
@@ -171,6 +176,8 @@
           <a class="button button-light" href="#">
             <span class="visually-hidden">Показать список</span>
           </a>
+        </div>
+      </div>
           <ul class="hotels-list">
             <li class="hotel-card">
               <a class="hotel-card-link" href="#">
@@ -313,7 +320,7 @@
       </main>
       <footer class="page-footer">
         <div class="page-footer-container">
-          <h2 class="visually-hidden">Контакты</h2>
+          <h2 class="visually-hidden" hidden>Контакты</h2>
           <!--В CSS добавить иконки через background-image-->
           <ul class="footer-social-list">
             <li class="footer-social-item">
