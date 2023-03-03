@@ -652,6 +652,10 @@ body {
   row-gap: 16px;
 }
 
+.hotel-card-image {
+  object-fit: cover;
+}
+
 .hotel-card-image-link {
   color: #000000;
   font-weight: 700;
