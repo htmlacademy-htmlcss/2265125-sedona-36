@@ -119,7 +119,7 @@ body {
   text-decoration: none;
   text-transform: capitalize;
   display: block;
-  padding: 20px 12px;
+  padding: 20px 16px;
 }
 
 .navigation-link-current {
@@ -143,20 +143,28 @@ body {
 }
 
 .navigation-user .navigation-link {
-  min-width: 44px;
-  min-height: 64px;
+  display: block;
+  width: 44px;
+  height: 64px;
+  padding: 22px 12px;
+  position: relative;
 }
 
-.navigation-user .navigation-item:nth-child(1) .navigation-link {
-  background-image: url("../images/search.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.navigation-user .navigation-item:nth-child(2) .navigation-link {
-  background-image: url("../images/favorites.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+.favorites-amount {
+  display: block;
+  font-size: 10px;
+  line-height: 10px;
+  font-weight: 400;
+  color: #FFFFFF;
+  position: absolute;
+  left: 20px;
+  bottom: 33px;
+  background-color: #7DB54F;
+  min-width: 20px;
+  min-height: 20px;
+  border-radius: 50%;
+  margin: 0 auto;
+  padding-top: 5px;
 }
 
 .navigation-button {
