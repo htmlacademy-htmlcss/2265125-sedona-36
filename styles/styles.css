@@ -122,6 +122,20 @@ body {
   padding: 20px 12px;
 }
 
+.navigation-link-current {
+  position: relative;
+}
+
+.navigation-link-current::before {
+  position: absolute;
+  right: 16px;
+  bottom: 0;
+  left: 16px;
+  height: 2px;
+  background-color: #756257;
+  content: "";
+}
+
 .navigation-user {
   margin-left: auto;
   width: 180px;
@@ -311,7 +325,6 @@ body {
   order: -1;
 }
 
-/*Позже добавить иконки сервисов*/
 .services-text-container {
   display: flex;
   flex-direction: column;
@@ -449,7 +462,6 @@ body {
   border-radius: 0 4px 4px 0;
   border-color: transparent;
 }
-/*В дальнейшем разобраться со стилизацией формы*/
 
 .page-footer {
   color: #000000;
