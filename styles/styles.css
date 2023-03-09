@@ -568,6 +568,8 @@ body {
   margin: 0;
 }
 
+/*Посмотреть внимательно позиционирование хлебных крошек*/
+
 .breadcrumbs {
   color: #FFFFFF;
   font-size: 16px;
@@ -582,15 +584,26 @@ body {
   align-items: center;
 }
 
+.breadcrumbs-item {
+  display: flex;
+  align-items: baseline;
+}
+
+.breadcrumbs-item:not(:last-child)::after {
+  margin-left: 10px;
+  background-image: url("../images/breadcrumbs/arrow-right.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  content: "";
+  width: 8px;
+  height: 10px;
+}
+
 .breadcrumbs-link {
   color: inherit;
   text-decoration: none;
-}
-
-.breadcrumbs-home {
-  width: 12px;
-  height: 12px;
-  margin-right: 10px;
+  width: 13px;
+  height: 21px;
 }
 
 .breadcrumbs-text {
@@ -715,6 +728,13 @@ body {
 
 .sorting-buttons .button:not(:last-child) {
   margin-right: 8px;
+}
+
+.button-dark,
+.button-light {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .button-dark {
