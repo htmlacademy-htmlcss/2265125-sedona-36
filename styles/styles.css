@@ -507,6 +507,8 @@ body {
   height: 40px;
 }
 
+
+
 .footer-social-list .footer-social-item:nth-child(1) .footer-social-vk {
   background-image: url("../images/vkontakte.svg");
 }
@@ -842,6 +844,13 @@ body {
   color: #82B3D3;
   font-size: 18px;
 }
+/*
+.stars-4 {
+  width: 100px;
+  background-image: url("../images/stars.svg");
+  background-size: 24px 17px;
+  background-repeat: repeat-x;
+}*/
 
 .rating {
   color: #333333;
