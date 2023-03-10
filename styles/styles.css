@@ -1026,13 +1026,47 @@ color: rgba(117, 97, 87, 0.3);
   color: #82B3D3;
   font-size: 18px;
 }
-/*
-.stars-4 {
-  width: 100px;
+
+.stars-1 {
+  width: 18px;
   background-image: url("../images/stars.svg");
-  background-size: 24px 17px;
+  background-size: 18px 17px;
   background-repeat: repeat-x;
-}*/
+  background-position: left center;
+}
+
+.stars-2 {
+  width: 46px;
+  background-image: url("../images/stars.svg");
+  background-size: calc(18px + 6px) 17px;
+  background-repeat: repeat-x;
+  background-position: left center;
+}
+
+.stars-3 {
+  width: 70px;
+  background-image: url("../images/stars.svg");
+  background-size: calc(18px + 6px) 17px;
+  background-repeat: repeat-x;
+  background-position: left center;
+}
+
+.stars-4 {
+  width: 94px;
+  background-image: url("../images/stars.svg");
+  background-size: calc(18px + 6px) 17px;
+  background-repeat: repeat-x;
+  background-position: left center;
+}
+
+.stars-5 {
+  width: 118px;
+  background-image: url("../images/stars.svg");
+  background-size: calc(18px + 6px) 17px;
+  background-repeat: repeat-x;
+  background-position: left center;
+}
+
 
 .rating {
   color: #333333;
