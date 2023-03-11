@@ -61,8 +61,9 @@ body {
   cursor: pointer;
 }
 
-.button:disabled {
+.button:disabled:not(.button-reset) {
   background-color: #E5E5E5;
+  cursor: default;
 }
 
 .box-shadow {
@@ -552,9 +553,48 @@ body {
   height: 52px;
   font-size: 18px;
   line-height: 24px;
+  color: #000000;
+  font-weight: 700;
   background-color: #F2F2F2;
   border-radius: 4px 0 0 4px;
   flex-grow: 1;
+}
+
+.subscribe-field:hover {
+  background-color: #E6E6E6;
+}
+
+.subscribe-field:focus {
+  outline: 3px solid #83B3D3;
+  background-color: #E6E6E6;
+}
+
+.subscribe-field:disabled,
+.subscribe-field:disabled:hover {
+  background-color: #E5E5E5;
+  color: #FFFFFF;
+}
+
+.subscribe-field:focus:not(:placeholder-shown) {
+  outline: none;
+  border: 2px solid #000000;
+  background-color: #F2F2F2;
+}
+
+.subscribe-field::placeholder {
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  opacity: 0.6;
+  font-weight: 400;
+}
+
+.input-error::after {
+  content: "Сообщение об ошибке";
+  color: #FF5757;
+  margin-left: 20px;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .subscribe-button {
@@ -563,6 +603,7 @@ body {
   background: #82B3D3;
   border-radius: 0 4px 4px 0;
   border-color: transparent;
+  outline: none;
 }
 
 .subscribe-button:hover,
@@ -713,8 +754,6 @@ color: rgba(117, 97, 87, 0.3);
   margin: 0;
 }
 
-/*Посмотреть внимательно позиционирование хлебных крошек*/
-
 .breadcrumbs {
   color: #FFFFFF;
   font-size: 16px;
@@ -769,11 +808,15 @@ color: rgba(117, 97, 87, 0.3);
   cursor: pointer;
 }
 
-.breadcrumbs-text:hover {
+.breadcrumbs-text-current {
+  cursor: default;
+}
+
+.breadcrumbs-text:not(.breadcrumbs-text-current):hover {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.breadcrumbs-text:active {
+.breadcrumbs-text:not(.breadcrumbs-text-current):active {
   color: rgba(255, 255, 255, 0.3);
 }
 
@@ -789,13 +832,22 @@ color: rgba(117, 97, 87, 0.3);
   min-height: 157px;
   padding: 0;
   margin: 0;
-  margin-right: 70px;
   margin-bottom: 73px;
+  border: 0;
+}
+
+.catalog-filter-group:first-child {
+  margin-right: 70px;
+}
+
+.catalog-filter-group:nth-child(2) {
+  margin-right: 140px;
 }
 
 .catalog-filter-list {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
 .catalog-filter-title {
@@ -803,13 +855,200 @@ color: rgba(117, 97, 87, 0.3);
   font-size: 20px;
   line-height: 24px;
   text-transform: capitalize;
+  margin-bottom: 32px;
+  padding: 0;
+}
+
+.catalog-filter-item:not(:last-child) {
+  margin-bottom: 16px;
 }
 
 .control {
-  font-family: 'PT Sans', sans-serif;
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+.control-label {
+  font: inherit;
   font-weight: 400;
   font-size: 18px;
   line-height: 23px;
+  position: absolute;
+  left: 36px;
+}
+
+.control-mark {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  margin: 0;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  width: 20px;
+  height: 20px;
+}
+
+.control:hover {
+  opacity: 0.6;
+}
+
+.control:focus .control-mark {
+  outline: 3px solid #83B3D3;
+}
+
+.control:active {
+  outline: none;
+  opacity: 0.3;
+}
+
+/*Узнать, почему не получается disabled*/
+.control-input:disabled {
+  opacity: 0.3;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before,
+.control-input[type="checkbox"]:checked + .control-mark::after {
+  position: absolute;
+  top: 6px;
+  left: 4px;
+  width: 12px;
+  height: 10px;
+  content: "";
+  background-image: url("../images/tick.svg");
+  background-repeat: no-repeat;
+}
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #3F5E72;
+  border-radius: 50%;
+  content: "";
+}
+
+.catalog-filter-group-range {
+  width: 288px;
+  height: 160px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.range-wrapper-inputs {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 48px;
+}
+
+.catalog-filter-label {
+  display: flex;
+  margin-right: 2px;
+  position: relative;
+}
+
+.range-input {
+  border: 0;
+  padding: 12px 20px;
+  width: 143px;
+  height: 48px;
+  font: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.range-input-min {
+  border-radius: 4px 0 0 4px;
+}
+
+.range-input-max {
+  border-radius: 0 4px 4px 0;
+}
+
+.range-input-min-text,
+.range-input-max-text {
+  position: absolute;
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 18px;
+  line-height: 24px;
+  right: 20px;
+  top: 12px;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.range-input:hover {
+  background-color: #E6E6E6;
+}
+
+.range-input:focus {
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+
+.range-input:focus:not(:placeholder-shown) {
+  outline: none;
+  background-color: #F2F2F2;
+  border: 2px solid #000000;
+}
+
+.range-scale {
+  position: relative;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #FFFFFF;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #FFFFFF;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:focus {
+  outline: 3px solid #83B3D3;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:active {
+  outline: none;
+  border: 2px solid #83B3D3;
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
+}
+
+.toggle-min {
+  top: -8px;
+  left: -1px;
+}
+
+.toggle-max {
+  top: -8px;
+  right: -1px;
 }
 
 .filter-buttons {
@@ -846,7 +1085,7 @@ color: rgba(117, 97, 87, 0.3);
 }
 
 .button-reset:focus {
-  border: 3px solid #83B3D3;
+  outline: 3px solid #83B3D3;
   color: #ffffff;
 }
 
@@ -857,6 +1096,7 @@ color: rgba(117, 97, 87, 0.3);
 
 .button-reset:disabled {
   color: rgba(255, 255, 255, 0.1);
+  cursor: default;
 }
 
 .results {
@@ -876,7 +1116,6 @@ color: rgba(117, 97, 87, 0.3);
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
-  /*Значение шире, чем в макете, т.к. кол-во может быть больше*/
   min-width: 370px;
   margin: 0;
   margin-right: auto;
@@ -904,6 +1143,11 @@ color: rgba(117, 97, 87, 0.3);
   width: 292px;
   height: 49px;
   margin-right: 70px;
+  appearance: none;
+  background-image: url("../images/select-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  cursor: pointer;
 }
 
 .select-control:hover {
@@ -914,12 +1158,19 @@ color: rgba(117, 97, 87, 0.3);
   border: 2px solid #68A2CA;
 }
 
+.select-control:focus:not(:placeholder-shown) {
+  border: 2px solid #3F5E72;
+}
+
 .select-control:active {
   border: 2px solid #3F5E72;
 }
 
 .select-control:disabled {
+  border: 2px solid #000000;
+  color: #000000;
   opacity: 0.3;
+  cursor: default;
 }
 
 .sorting-buttons {
