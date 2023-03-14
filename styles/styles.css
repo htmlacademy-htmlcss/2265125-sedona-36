@@ -867,7 +867,6 @@ body {
   cursor: pointer;
 }
 
-/*Пока сделала через margin, т.к. не получается на флексах*/
 .guests-field-group .form-label-adults {
   margin-right: 46px;
 }
@@ -1026,24 +1025,6 @@ body {
   background-color: #83b3d3;
   border-radius: 10px;
 }
-
-/*.adults-guests-wrapper {
-  /*display: flex;
-  justify-content: center;
-  height: 48px;
-  position: absolute;
-  left: 137px;
-  top: 0;
-}
-
-.kids-guests-wrapper {
-  display: flex;
-  justify-content: center;
-  height: 48px;
-  position: absolute;
-  right: 0;
-  top: 0;
-}*/
 
 .main-inner {
   color: #333333;
@@ -1220,7 +1201,6 @@ body {
   opacity: 0.3;
 }
 
-/*Узнать, почему не получается disabled*/
 .control-input:disabled {
   opacity: 0.3;
 }
