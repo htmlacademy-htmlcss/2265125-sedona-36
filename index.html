@@ -105,7 +105,6 @@
                 <h3 class="advantages-title advantages-title-accent">
                   Настоящий городок
                 </h3>
-                <!--Добавить декоративные линии в преимущества-->
                 <span class="advantages-stripe"></span>
                 <p class="advantages-text advantages-text-accent">
                   Седона — не аттракцион для туристов, там течёт своя жизнь
@@ -230,7 +229,9 @@
               id="subscribe-email"
               required
             />
-            <button class="button subscribe-button" type="submit">Подписаться</button>
+            <button class="button subscribe-button" type="submit">
+              Подписаться
+            </button>
           </form>
         </section>
       </main>
@@ -347,7 +348,7 @@
             action="https://echo.htmlacademy.ru/"
             method="post"
           >
-            <span class="date-field-group">
+            <div class="date-field-group">
               <label class="form-label" for="checkin-date">Дата Заезда:</label>
               <input
                 class="search-field input-error"
@@ -355,6 +356,7 @@
                 id="checkin-date"
                 name="checkin-date"
                 placeholder="Укажите дату"
+                required
               />
               <svg
                 class="date-icon"
@@ -377,7 +379,7 @@
                   d="M8 10c.3 0 .5-.2.5-.5S8.3 9 8 9s-.5.2-.5.5.2.5.5.5Zm2.3 0c.3 0 .4-.2.4-.5s-.1-.5-.4-.5c-.4 0-.6.2-.6.5s.3.5.6.5Zm-4.5 1c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.3-.5-.5-.5Zm-2.3-1c.3 0 .5-.2.5-.5S3.8 9 3.5 9s-.5.2-.5.5.2.5.5.5Zm0 1c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM8 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5Zm2.3 0c-.4 0-.6.2-.6.5s.3.5.6.5.4-.2.4-.5-.1-.5-.4-.5Zm2.2-1c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5Zm0 1c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5Z"
                 />
               </svg>
-            </span>
+            </div>
             <span class="date-field-group">
               <label class="form-label" for="checkout-date">Дата Выезда:</label>
               <input
@@ -386,6 +388,7 @@
                 id="checkout-date"
                 name="checkout-date"
                 placeholder="Укажите дату"
+                required
               />
               <svg
                 class="date-icon"
@@ -410,7 +413,7 @@
               </svg>
             </span>
             <div class="guests-wrapper">
-              <span class="guests-field-group adults-form">
+              <div class="guests-field-group adults-form">
                 <label class="form-label-adults" for="adults-guests"
                   >Взрослые:</label
                 >
@@ -444,21 +447,29 @@
                     <path d="M14 6H8V0H6v6H0v2h6v6h2V8h6V6Z" />
                   </svg>
                 </button>
-              </span>
-              <span class="guests-field-group kids-form">
-                <span class="kids-info-wrapper">
+              </div>
+              <div class="guests-field-group kids-form">
+                <span class="form-label-kids form-label-kids-icon">
                   <label class="form-label-kids" for="kids-guests">Дети:</label>
-                  <span class="kids-info">
-                    <span class="kids-info-tooltip">
-                      <p>
-                        Укажите количество детей, которые будут с вами, возраст
-                        которых от 6 до 18 лет. Дети до 6 лет размещаются
-                        бесплатно.
-                      </p>
-                    </span>
+                  <span class="kids-tooltip">
+                    <button class="kids-tooltip-toggle" type="button" aria-labelledby="tooltip-label-kids">
+                      <svg
+                        class="kids-tooltip-icon"
+                        aria-hidden="true"
+                        focusable="false"
+                        width="26"
+                        height="26"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                      <circle cx="13" cy="13" r="13" fill="#83B3D3"/><path fill="#fff" fill-rule="evenodd" d="M12 7h2v2h-2V7Zm2 12h-2v-9h2v9Z" clip-rule="evenodd"/>
+                      </svg>
+                    </button>
+                    <span class="kids-tooltip-text" role="tooltip" id="tooltip-label-kids">Укажите количество детей, которые будут с вами, возраст
+                      которых от 6 до 18 лет. Дети до 6 лет размещаются
+                      бесплатно.</span
+                    >
                   </span>
                 </span>
-                <!--<span class="kids-guests-wrapper">-->
                 <button class="button less-button" type="button">
                   <svg
                     class="less-icon"
@@ -489,8 +500,7 @@
                     <path d="M14 6H8V0H6v6H0v2h6v6h2V8h6V6Z" />
                   </svg>
                 </button>
-                <!--</span>-->
-              </span>
+              </div>
             </div>
             <a class="button search-form-button" href="#">Найти</a>
           </form>
