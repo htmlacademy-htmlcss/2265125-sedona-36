@@ -1419,6 +1419,8 @@ body {
   margin-right: auto;
 }
 
+/*Сортировка карточек*/
+
 .sorting-container {
   color: #000000;
   background-color: #ffffff;
@@ -1502,6 +1504,8 @@ body {
 .sorting-button:active {
   border: 2px solid #000000;
 }
+
+/*Карточки отелей*/
 
 .hotels-list {
   list-style-type: none;
