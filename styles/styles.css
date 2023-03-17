@@ -91,19 +91,19 @@ body {
   display: block;
 }
 
-.page-header-logo-image {
+.page-header-logo-icon {
   position: absolute;
 }
 
-.page-header-logo-image:hover {
+.page-header-logo-icon:hover {
   opacity: 0.6;
 }
 
-.page-header-logo-image:focus {
+.page-header-logo-icon:focus {
   opacity: 0.6;
 }
 
-.page-header-logo-image:active {
+.page-header-logo-icon:active {
   opacity: 0.3;
 }
 
@@ -1376,6 +1376,8 @@ body {
   position: absolute;
   height: 4px;
   background-color: #ffffff;
+  left: 1px;
+  width: 226px;
 }
 
 .range-toggle {
