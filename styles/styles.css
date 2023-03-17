@@ -170,6 +170,7 @@ body {
   margin-left: auto;
   width: 180px;
   justify-content: flex-end;
+  align-items: flex-start;
 }
 
 .navigation-user .navigation-link {
@@ -235,8 +236,8 @@ body {
   padding: 8px;
   font-size: 16px;
   line-height: 20px;
-  align-self: center;
-  margin-left: 20px;
+  align-self: flex-start;
+  margin: 14px 0 14px 20px;
 }
 
 .navigation-button:hover,
@@ -291,10 +292,11 @@ body {
 .advantages-text-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   min-height: 261px;
   margin-bottom: 21px;
+  padding: 69px 96px;
 }
 
 /*1/2 предложений в контейнерах перед преимуществами, сервисами и в секции "Заинтересовались?"*/
@@ -305,13 +307,18 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
-  margin-top: 0;
-  margin-bottom: 25px;
-  width: 620px;
+  max-width: 800px;
+  margin: 0;
+  margin-bottom: 20px;
 }
 
 .caption {
   margin: 0;
+  max-width: 800px;
+}
+
+.advantages .description {
+  margin-bottom: 25px;
 }
 
 .advantages-list {
@@ -428,12 +435,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 246px;
-}
-
-.description-services,
-.description-offer {
-  width: 505px;
-  margin-bottom: 20px;
+  padding: 64px 96px;
 }
 
 .services-list {
@@ -507,17 +509,25 @@ body {
 .offer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   min-height: 406px;
+  padding: 96px;
+}
+
+.offer .caption {
+  margin-bottom: 54px;
 }
 
 .search-button {
-  width: 375px;
-  height: 52px;
-  padding: 8px 10px;
+  min-width: 375px;
+  max-width: 700px;
+  min-height: 52px;
+  padding: 8px 20px;
   font-size: 20px;
-  margin-top: 54px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .subscribe {
@@ -535,7 +545,7 @@ body {
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  margin-top: 0;
+  margin: 0;
   margin-bottom: 20px;
 }
 
@@ -545,7 +555,7 @@ body {
   line-height: 26px;
   margin: 0 auto;
   margin-bottom: 54px;
-  width: 475px;
+  max-width: 700px;
 }
 
 .subscribe-form {
@@ -709,7 +719,7 @@ body {
 .page-footer {
   color: #000000;
   background-color: #ffffff;
-  height: 120px;
+  min-height: 120px;
   display: flex;
 }
 
@@ -717,6 +727,7 @@ body {
   display: flex;
   margin: 40px auto 30px;
   width: 1060px;
+  position: relative;
 }
 
 .footer-social-list {
@@ -725,7 +736,8 @@ body {
   margin: 0;
   display: flex;
   flex-wrap: wrap;
-  margin-right: auto;
+  justify-content: flex-start;
+  max-width: 284px;
 }
 
 .footer-social-item {
@@ -762,6 +774,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
 
 .footer-contacts-address-phone {
@@ -818,9 +834,9 @@ body {
   background-color: rgba(242, 242, 242, 0.8);
 }
 
-/*.modal-container-close {
+.modal-container-close {
   display: none;
-}*/
+}
 
 .modal {
   position: relative;
