@@ -261,17 +261,21 @@ body {
 
 .main-container {
   flex-grow: 1;
-  padding-top: 51px;
 }
 
 .main-index {
   color: #333333;
   background-color: #ffffff;
-  background-image: url("../images/zigzag.svg"),
-    url("../images/index-background.jpg");
+}
+
+.main-logo-wrapper {
+  min-height: 485px;
+  padding-top: 51px;
+  background-image: url("../images/zigzag.svg"), url("../images/index-background.jpg");
   background-size: 1200px 57px, 1200px 485px;
   background-position: 50% 428px, 50% 0;
   background-repeat: no-repeat;
+  background-color: #000000;
 }
 
 .main-logo {
@@ -771,13 +775,9 @@ body {
 }
 
 .footer-contacts-address {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  left: 379px;
+  top: 6px;
 }
 
 .footer-contacts-address-phone {
@@ -1125,6 +1125,9 @@ body {
   color: #ffffff;
   text-transform: capitalize;
   margin: 35px 0 8px 70px;
+  max-width: 1060px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .breadcrumbs {
@@ -1282,6 +1285,7 @@ body {
 .control-input:disabled .control-mark::before {
   outline: none;
   opacity: 0.3;
+  cursor: default;
 }
 
 .control-input[type="checkbox"]:checked + .control-mark::before,
