@@ -1528,7 +1528,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   color: #333333;
-  padding-left: 20px;
+  padding-left: 18px;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
   width: 292px;
@@ -1537,7 +1537,7 @@ body {
   appearance: none;
   background-image: url("../images/select-arrow.svg");
   background-repeat: no-repeat;
-  background-position: right 20px center;
+  background-position: right 18px center;
   cursor: pointer;
 }
 
@@ -1603,9 +1603,9 @@ body {
   padding: 0;
   display: grid;
   grid-template-columns: repeat(3, 340px);
-  gap: 18px;
+  gap: 20px;
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 38px;
   position: relative;
 }
 
@@ -1774,7 +1774,7 @@ body {
   height: 1px;
   background-color: #e6e6e6;
   position: absolute;
-  bottom: -40px;
+  bottom: -38px;
 }
 
 .pagination {
